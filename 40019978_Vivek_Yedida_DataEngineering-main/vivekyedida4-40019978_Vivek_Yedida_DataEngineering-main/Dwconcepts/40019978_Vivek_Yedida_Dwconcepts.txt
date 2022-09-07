@@ -1,0 +1,209 @@
+
+
+1.What is Data Warehouse?
+ans:Data Warehouse  is a repository of storing info which is used for queries and analysis process Data warehouse had data which is useful in analysing business 
+Data warehouse is also  called as business warehouse and  Business intelligent warehouse and decision supporting system
+
+2.What are the characterstics of data Warehouse?
+ans:
+1.subject oriented : it deals with specific subject oriented data
+2.Time variant : time variation will be there
+3.non-volatile : it cannot be changed (non erasable )
+4.summarized : the final out come here will be summarized in a simple way
+
+3.Explain the architecture of Data Warehouse?
+ans: datawarehouse mainly consists of sequence of four mechanisms
+1.OLTP(online transmission processing):here the data will be unstructured oltp main moto is to transfer the data till OLAP
+2.STAGING: here in this mechanism data which is in heterogenous from will be changed to homogenous form
+3.ETL(Extract transform load): from the name itself it is known that at this positio the homogenous data will be extracted and transformed into a form 
+which is used for business entities and loaded to ODS
+4.ODS(operational data store):here the small granulated data points are being fed to OLAP
+5.OLAP:here the big granulated data is hown fro analysis purpose using bi tools
+
+4. what is OLTP?
+ans: OLTP is online transaction processing which will take data from online resources and make it undergo the changes this is the starting step
+in the data warehouse model it has operational data which in turn needs to be converted to derived  data
+
+4.1 what is staging?
+ans: staging is the second mechanism in data warehouse model here the heterogenous data will be converted into homogenous data 
+in this step the data will undergo data mining(extrating valuable data) data cleansing (discarding unwanted data)
+
+5. what is ETL stage?
+ans: ETL means extract transform load in this process the data provided by staging will be transformed into different types which makes
+analysis simple and it will be loading the data into ODS
+ 
+6. What is ods
+ans: operational data store (ODS) is a central database that provides information  of the latest data from multiple transactional systems for 
+operational reporting. It enables various units to combine data in its original format from various sources into a single destination
+ to make it available for business analysis.
+ 
+7. What is OLAP?
+ans: OLAP (for online analytical processing) this contains high granulated massive data it  is software for performing multidimensional analysis 
+at high speeds on large volumes of data from a data warehouse this is the final step in data warehouse model 
+
+8.What is DataMart?
+ans: Datamart : (subsidiary)subset of larger data warehouse ,structure of data  warehouse 
+in data mart  the subject or product wise data of a large data warehouse is available
+it is like a sub branch to a company 
+
+
+9. what is Datawarehouse building methodology? 
+ans:
+there are two approaches while building dataware house 
+1. top-down approach  (first data warehouse is modelled and then data mart will be modelled based on requirements and data)
+2.bottom-down approach (first data mart is modelled or built and then data warehouse is built)
+
+10.what is  Data modelling?
+ans:Data modeling is the process of creating a simplified representation  of a  system and the data elements it contains,
+using text and symbols to represent the data and how it flows. Data models provide a blueprint for designing a new database 
+it contains various dimensions measures which helps in knowing the data and the model in detail
+
+11.what are tables?
+ans: tables are the data points represented in a tabular format there are various tables available data table and fact table are some of them 
+fact table consists of primary key data points and some measures
+
+12. difference between OLTP&OLAP?
+ans:
+    OLTP                                     OLAP
+1.OPERATIONAL DATA                        1.Derived data
+
+2.Can be updated                          2.No updates
+
+3.Application oriented                    3.Subject oriented
+
+4.Detailed info                           4.Summarized info
+ 
+
+13.difference between OLTP&ODS?
+ans:
+         OLTP                                    ODS
+
+1.Online transaction processing              1.operational datastore
+
+2.starts transaction                         2. shows data after transaction
+
+3.detailed info                              3. summarized info after transaction
+
+
+14.difference between dataware house & datamart?
+      
+         dataware house                           datamart
+
+1.multiple sets of data types                1. single type of data types(specific)
+
+2.large sets of data of different            2. one set of data of busines entities
+business entities
+ ex:departments and students and              ex: particular students type of data 
+professors datas
+
+15. difference between star schema &snowflake schema?
+ans:
+        star schema                              snowflake schema
+
+1.single fact table surrounded with             1.multiple fact table with multiple dimensions
+various dimensions
+ 
+2.multideimensional schema                       2. multideimensional schema      
+
+3. this schema forms star with the fact and      3. this schema forms a snowflake with facts and 
+dimensions tables                                   dimensions table
+
+16.difference between er model and dimensions model?
+ans:
+               er model                             dimension model
+
+1.in er model there is entity relation             1. in dimension model there is dimension relation between them
+between them
+2. no changes in table in model                      2. various change sin tables of model
+
+17.what are dimensions?
+ans:
+dimensions are various attributes in tables
+there are various types
+1. confirmed dimensions
+2. degenerate dimensions
+3. slowly changing dimensions
+
+18.what is fact?
+ans: fact table is nothing but the measurable data attributes in the given data table which consists of calculatable values
+ex: product id,emp_salary
+
+19.what are various dimensions
+1. confirmed dimensions
+2. degenerate dimensions
+3. slowly changing dimensions
+
+20. what is scd?
+ans:scd means slowly changed dimensions which means the dimensions changing this comes under dimension modelling
+various types are 
+1. scd1:it shows historic data 
+2. scd2: it shows current past and historic values
+3. scd3: it shows current and past values
+
+21. fact types:?
+there are various fact types
+1.Additivefact 
+2.semi addictictive fact
+3.Non-Additive
+
+22. what is measure?
+ans:
+measure is a numerically calculatabe values or attributes in the table 
+ex: product_quantity,product_sales
+
+23.what is schema and its types:
+structure of thr given table is known as schema 
+1.star schema
+2.snowflake schema
+3. multiple schema 
+
+24. what is historical data?
+ans:data collected over a period of time is known as historical data
+ex:last 10 years sales on black shirts
+last quarter sales on masks
+
+25. what is surrogate key?
+ans:
+A surrogate key is a unique key or primary key which will be added to scd for an entity  or for an object in the database
+and arranged in the oreder
+
+26.what is primary key:
+ans:primary keys are  constraint uniquely identifies each record in a table
+here null values are accepted
+ex:productid
+
+27.what is unique key?
+ans:a unique key is a candidate key that is not the primary key of the relation.
+All the candidate keys of a relation can uniquely identify the records of the relation, 
+but only one of them is used as the primary key of the relation.
+
+28.what is OLAP and its types?
+ans:
+olap is tha online analytics processing this is the last step of the data ware housing it gives high granulated data
+which is useful for the business analytics purpose and for preperation of reports
+1.RELATIONAL OLAP
+2.MULTIDIMENSIONAL OLAP
+3.HYBRID OLAP
+
+29. What are olap analysis list?
+ans:
+Roll-up. : this operation summarizes the data along the dimension.
+Drill-down. This allows analysts to navigate deeper among the dimensions of data
+Slice. This enables an analyst to take one level of information for display, such as "sales in 2017."
+Dice. This allows an analyst to select data from multiple dimensions to analyze
+Pivot. Analysts can gain a new view of data by rotating the data axes of the cube.
+ 
+30.what is modern data warehouse architecture?
+ans: various steps in modern dataware house are 
+1.csv /files reading
+2.hdfs
+3.datascience algorithms 
+4.datawarehouse
+5.datamart
+6.analysis tools or bi tools
+
+
+
+
+
+
